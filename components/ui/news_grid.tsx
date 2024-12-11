@@ -18,6 +18,26 @@ const GridLayout = () => {
     {
       title: 'Ajith Kumar Requests Fans To Stop Viral \'Kadavul’ Ajith’y Slogan: \'I’m...',
       category: 'SOUTH CINEMA'
+    },
+    {
+      title: 'Bangladesh Acknowledges 88 Cases of Violence Against Minorities After Sheikh...',
+      category: 'WORLD'
+    },
+    {
+      title: 'What Is 4B, The Fringe Movement From South Korea That Became A...',
+      category: 'WORLD'
+    },
+    {
+      title: 'INDIA Bloc To Challenge Maharashtra Verdict In Supreme Court Over \'EVM...',
+      category: 'ELECTION 2024'
+    },
+    {
+      title: 'Ajith Kumar Requests Fans To Stop Viral \'Kadavul’ Ajith’y Slogan: \'I’m...',
+      category: 'SOUTH CINEMA'
+    },
+    {
+      title: 'Ajith Kumar Requests Fans To Stop Viral \'Kadavul’ Ajith’y Slogan: \'I’m...',
+      category: 'SOUTH CINEMA'
     }
   ];
 

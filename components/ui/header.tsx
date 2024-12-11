@@ -1,6 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube, FaSearch } from "react-icons/fa";
+
+// Mock translation function (replace with actual API or library)
+const translatePage = (language: string) => {
+  console.log(`Translating page to: ${language}`);
+  // Here you can use a library like i18next or call an API for translations
+  // e.g., i18next.changeLanguage(language) or use a custom translation API
+};
 
 const Header: React.FC = () => {
   const currentDate = new Date().toLocaleDateString("en-US", {
@@ -10,7 +17,25 @@ const Header: React.FC = () => {
     day: "numeric",
   });
 
-  const languages = ["हिंदी", "தமிழ்", "తెలుగు", "ಕನ್ನಡ", "മലയാളം", "বাংলা", "ਪੰਜਾਬੀ", "ગુજરાતી", "ଓଡ଼ିଆ", "اردو"];
+  const languages = [
+    { label: "हिंदी", code: "hi" },
+    { label: "தமிழ்", code: "ta" },
+    { label: "తెలుగు", code: "te" },
+    { label: "ಕನ್ನಡ", code: "kn" },
+    { label: "മലയാളം", code: "ml" },
+    { label: "বাংলা", code: "bn" },
+    { label: "ਪੰਜਾਬੀ", code: "pa" },
+    { label: "ગુજરાતી", code: "gu" },
+    { label: "ଓଡ଼ିଆ", code: "or" },
+    { label: "اردو", code: "ur" },
+  ];
+
+  const [selectedLanguage, setSelectedLanguage] = useState<string>("en");
+
+  const handleLanguageChange = (languageCode: string) => {
+    setSelectedLanguage(languageCode);
+    translatePage(languageCode);
+  };
 
   return (
     <header className="bg-gray-800 text-white">
@@ -20,10 +45,16 @@ const Header: React.FC = () => {
         <div className="flex items-center gap-4">
           <div className="hidden sm:block text-sm text-gray-400">{currentDate}</div>
           <div className="hidden sm:flex items-center gap-2 text-sm text-gray-400">
-            {languages.map((language, index) => (
-              <span key={index} className=" rounded px-2 py-1">
-                {language}
-              </span>
+            {languages.map((language) => (
+              <button
+                key={language.code}
+                onClick={() => handleLanguageChange(language.code)}
+                className={`rounded px-2 py-1 ${
+                  selectedLanguage === language.code ? "bg-gray-600 text-white" : "hover:bg-gray-700"
+                }`}
+              >
+                {language.label}
+              </button>
             ))}
           </div>
         </div>
@@ -57,8 +88,11 @@ const Header: React.FC = () => {
 
       {/* Logo Section */}
       <div className="bg-black">
-        <div className="text-7xl font-bold text-center">
-          <span className="text-red-500">SR</span> <span className="text-white">samachar</span>
+        <div className="text-7xl font-bold text-center flex justify-center items-center gap-2 relative overflow-hidden">
+          <div className="marquee flex items-center gap-2">
+            <span className="text-red-500">SR</span>
+            <span className="text-white">samachar</span>
+          </div>
         </div>
       </div>
 
