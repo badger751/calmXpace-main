@@ -188,7 +188,7 @@ export const Card = ({
       <motion.button
         layoutId={layout ? `card-${card.title}` : undefined}
         onClick={handleOpen}
-        className="rounded-3xl bg-gray-100 h-[40rem] w-56 md:w-96 overflow-hidden flex flex-col items-start justify-start relative"
+        className="rounded-3xl bg-gray-100 h-[30rem] w-40 md:w-72 overflow-hidden flex flex-col items-start justify-start relative"
       >
         <div className="relative z-40 p-8">
           <p className="text-white text-sm font-medium">{card.category}</p>

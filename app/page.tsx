@@ -12,6 +12,7 @@ import GridLayout from "@/components/ui/news_grid";
 import NewsFeed from "@/components/ui/small_layout";
 import ResponsiveNewsGrid from "@/components/ui/large_layout";
 import ResponsiveNewsGridWithVideos from "@/components/sections/ResponsiveNewsGrid";
+import ButtonPage from "@/components/sections/buttonpage";
 
 export default async function Home() {
   const lifestyleItems = [
@@ -47,6 +48,7 @@ export default async function Home() {
             <h2 className="text-5xl text-white font-semibold">Latest News</h2>
             <ResponsiveNewsGrid/>
             <AppleCardsCarouselDemo />
+            <ButtonPage/>
             <ResponsiveNewsGridWithVideos/>
             <div className="sm:mt-20">
               <h1 className="text-black font-bold text-5xl sm:text-7xl">Hot News</h1>
