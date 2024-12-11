@@ -1,0 +1,15 @@
+/* Tailwind CSS styles */
+.menu {
+    @apply bg-transparent text-black font-bold;
+    /* Add your desired menu styles here */
+}
+
+.menuItem {
+    @apply flex items-center gap-2 px-48 py-2 hover:bg-gray-800;
+    /* Add your desired menu item styles here */
+}
+
+.menuIcon {
+    @apply text-2xl;
+    /* Add your desired icon styles here */
+}
