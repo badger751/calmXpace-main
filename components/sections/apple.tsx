@@ -54,38 +54,38 @@ const data = [
   {
     category: "",
     title: "",
-    src: "/videos/video_2.mp4",
+    src: "https://i.ibb.co/4F2qbCm/Post-1.jpg",
     content : <DummyContent/>
     
   },
   {
     category: "",
     title: "",
-    src: "/videos/video_3.mp4",
+    src: "https://i.ibb.co/4F2qbCm/Post-1.jpg",
     content: <DummyContent />,
   },
   {
     category: "",
     title: "",
-    src: "/videos/video_4.mp4",
+    src: "https://i.ibb.co/4F2qbCm/Post-1.jpg",
     content: <DummyContent />,
   },
 
   {
     category: "",
     title: "",
-    src: "/videos/video_5.mp4",
+    src: "https://i.ibb.co/4F2qbCm/Post-1.jpg",
     content: <DummyContent />,
   },
   {
     category: "",
     title: "",
-    src: "/videos/video_6.mp4",
+    src: "https://i.ibb.co/4F2qbCm/Post-1.jpg",
     content: <DummyContent />,
   }, {
     category: "",
     title: "",
-    src: "/videos/video_7.mp4",
+    src: "https://i.ibb.co/4F2qbCm/Post-1.jpg",
     content: <DummyContent />,
   },
 ];
