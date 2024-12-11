@@ -23,12 +23,6 @@ const ResponsiveNewsGridWithVideos = () => {
       headline:
         "Opinion: Matangi — The New Indian Guerilla In The High Seas",
     },
-    {
-      category: "Election 2024",
-      videoUrl: "https://www.w3schools.com/html/movie.mp4",
-      headline:
-        "Opinion: Delhi Elections 2025 — Will BJP’s Haryana And Maharashtra Momentum Continue?",
-    },
   ];
 
   return (

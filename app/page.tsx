@@ -32,7 +32,7 @@ export default async function Home() {
   return (
     <div className="bg-black min-h-screen">
       <Header />
-      <div className="grid grid-cols-12 gap-4 p-4">
+      <div className="grid grid-cols-12 gap-4 p-10">
         {/* Left Column */}
         <div className="col-span-3 hidden lg:block">
           <div className="space-y-4"> {/* Space for components in rows */}
@@ -44,13 +44,12 @@ export default async function Home() {
         {/* Center Column */}
         <div className="col-span-6">
           <div className="space-y-6">
-            <h2 className="text-7xl text-black font-bold">Lifestyle</h2>
+            <h2 className="text-5xl text-white font-semibold">Latest News</h2>
             <ResponsiveNewsGrid/>
             <AppleCardsCarouselDemo />
             <ResponsiveNewsGridWithVideos/>
             <div className="sm:mt-20">
               <h1 className="text-black font-bold text-5xl sm:text-7xl">Hot News</h1>
-              <InfiniteMovingCardsDemo />
               <GridLayout/>
 
 
