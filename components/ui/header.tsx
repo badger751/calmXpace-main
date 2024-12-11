@@ -2,7 +2,6 @@ import React from "react";
 import Link from "next/link";
 import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube, FaSearch } from "react-icons/fa";
 
-
 const Header: React.FC = () => {
   const currentDate = new Date().toLocaleDateString("en-US", {
     weekday: "long",
@@ -11,14 +10,23 @@ const Header: React.FC = () => {
     day: "numeric",
   });
 
+  const languages = ["हिंदी", "தமிழ்", "తెలుగు", "ಕನ್ನಡ", "മലയാളം", "বাংলা", "ਪੰਜਾਬੀ", "ગુજરાતી", "ଓଡ଼ିଆ", "اردو"];
+
   return (
     <header className="bg-gray-800 text-white">
       {/* Top Section */}
       <div className="flex justify-between items-center px-4 lg:px-8 py-2">
-        {/* Logo */}
-
-        {/* Date */}
-        <div className="hidden sm:block text-sm text-gray-400">{currentDate}</div>
+        {/* Date and Languages */}
+        <div className="flex items-center gap-4">
+          <div className="hidden sm:block text-sm text-gray-400">{currentDate}</div>
+          <div className="hidden sm:flex items-center gap-2 text-sm text-gray-400">
+            {languages.map((language, index) => (
+              <span key={index} className=" rounded px-2 py-1">
+                {language}
+              </span>
+            ))}
+          </div>
+        </div>
 
         {/* Social Icons */}
         <div className="flex items-center gap-4">
@@ -46,9 +54,11 @@ const Header: React.FC = () => {
           />
         </div>
       </div>
-      <div className="bg-black " >
-      <div className="text-7xl font-bold text-center">
-          <span className="text-red-500">SR</span> <span className="text-white" >samachar</span>
+
+      {/* Logo Section */}
+      <div className="bg-black">
+        <div className="text-7xl font-bold text-center">
+          <span className="text-red-500">SR</span> <span className="text-white">samachar</span>
         </div>
       </div>
 
@@ -74,6 +84,10 @@ const Header: React.FC = () => {
               </Link>
             </li>
           ))}
+          {/* "LIVE" Section */}
+          <li className="px-2">
+            <span className="bg-red-500 text-white px-3 py-1 rounded-md font-bold">LIVE</span>
+          </li>
         </ul>
       </nav>
     </header>
