@@ -4,7 +4,7 @@ import LargeNewsCard from "@/components/ui/large_card";
 const ResponsiveNewsGrid = () => {
   const mainNews = {
     category: "Technology",
-    imageUrl: "https://via.placeholder.com/600x400",
+    imageUrl: "https://i.ibb.co/4F2qbCm/Post-1.jpg",
     headline:
       "AI-Generated Content Vs AI-Content Detectors: How Do They Work? Are They Even Effective?",
   };

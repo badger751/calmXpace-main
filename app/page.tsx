@@ -72,23 +72,23 @@ export default async function Home() {
 const newsItems = [
   {
     category: "India",
-    imageUrl: "https://via.placeholder.com/100",
+    imageUrl: "https://i.ibb.co/55CdTjZ/Post-2.jpg",
     headline: "India-Russia Friendship Higher Than Highest...",
   },
   {
     category: "Election 2024",
-    imageUrl: "https://via.placeholder.com/100",
+    imageUrl: "https://i.ibb.co/55CdTjZ/Post-2.jpg",
     headline: "Delhi Polls: Door Not Shut For AAP-Congress Alliance?",
   },
   {
     category: "India",
-    imageUrl: "https://via.placeholder.com/100",
+    imageUrl: "https://i.ibb.co/hWFn3sm/post-4.jpg",
     headline:
       "Parliamentary Affairs Minister Slams No-Trust Motion Against...",
   },
   {
     category: "Cities",
-    imageUrl: "https://via.placeholder.com/100",
+    imageUrl: "https://i.ibb.co/NN4yVnY/cherry.jpg",
     headline: "Techie Dies By Suicide, Tags Trump & Musk In 1.5-Hour...",
   },
 ];
