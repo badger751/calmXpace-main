@@ -46,9 +46,9 @@ const Header: React.FC = () => {
           />
         </div>
       </div>
-      <div className="bg-white " >
+      <div className="bg-black " >
       <div className="text-7xl font-bold text-center">
-          <span className="text-red-500">SR</span> <span className="text-black" >samachar</span>
+          <span className="text-red-500">SR</span> <span className="text-white" >samachar</span>
         </div>
       </div>
 

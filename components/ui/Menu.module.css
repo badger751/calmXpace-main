@@ -1,6 +1,6 @@
 /* Tailwind CSS styles */
 .menu {
-    @apply bg-transparent text-black font-bold;
+    @apply bg-transparent text-white font-serif;
     /* Add your desired menu styles here */
 }
 

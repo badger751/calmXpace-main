@@ -8,15 +8,15 @@ type MenuItem = {
 };
 
 const menuItems: MenuItem[] = [
-    { icon: <span className={styles.menuIcon}>📺</span>, label: 'Live Now', href: '/' },
-    { icon: <span className={styles.menuIcon}>👑</span>, label: 'Premium', href: '/premium' },
-    { icon: <span className={styles.menuIcon}>▶️</span>, label: 'Video', href: '/video' },
-    { icon: <span className={styles.menuIcon}>🎞️</span>, label: 'Reels', href: '/reels' },
-    { icon: <span className={styles.menuIcon}>🌐</span>, label: 'Web Stories', href: '/web-stories' },
-    { icon: <span className={styles.menuIcon}>📷</span>, label: 'Photo Gallery', href: '/photo-gallery' },
-    { icon: <span className={styles.menuIcon}>🎙️</span>, label: 'Podcast', href: '/podcast' },
-    { icon: <span className={styles.menuIcon}>🍿</span>, label: 'Movie Review', href: '/movie-review' },
-    { icon: <span className={styles.menuIcon}>💬</span>, label: 'Opinion', href: '/opinion' },
+    { icon: <span className={styles.menuIcon}></span>, label: 'Live Now', href: '/' },
+    { icon: <span className={styles.menuIcon}></span>, label: 'Premium', href: '/premium' },
+    { icon: <span className={styles.menuIcon}></span>, label: 'Video', href: '/video' },
+    { icon: <span className={styles.menuIcon}></span>, label: 'Reels', href: '/reels' },
+    { icon: <span className={styles.menuIcon}></span>, label: 'Web Stories', href: '/web-stories' },
+    { icon: <span className={styles.menuIcon}></span>, label: 'Photo Gallery', href: '/photo-gallery' },
+    { icon: <span className={styles.menuIcon}></span>, label: 'Podcast', href: '/podcast' },
+    { icon: <span className={styles.menuIcon}></span>, label: 'Movie Review', href: '/movie-review' },
+    { icon: <span className={styles.menuIcon}></span>, label: 'Opinion', href: '/opinion' },
 ];
 
 const Menu: React.FC = () => {

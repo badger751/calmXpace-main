@@ -30,7 +30,7 @@ export default async function Home() {
   ];
 
   return (
-    <div className="bg-white min-h-screen">
+    <div className="bg-black min-h-screen">
       <Header />
       <div className="grid grid-cols-12 gap-4 p-4">
         {/* Left Column */}
