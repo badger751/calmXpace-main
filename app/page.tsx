@@ -16,20 +16,6 @@ import CardSection from "@/components/sections/md-layout";
 import Menu2 from "@/components/ui/menu2";
 
 export default async function Home() {
-  const lifestyleItems = [
-    {
-      title: "The Dawn of Innovation",
-      description: "Explore the birth of groundbreaking ideas and inventions.",
-    },
-    {
-      title: "The Digital Revolution",
-      description: "Dive into the transformative power of technology.",
-    },
-    {
-      title: "The Art of Design",
-      description: "Discover the beauty of thoughtful and functional design.",
-    },
-  ];
 
   return (
     <div className="flex flex-col min-h-screen bg-black">
@@ -90,7 +76,7 @@ export default async function Home() {
             <ResponsiveNewsGrid />
             <AppleCardsCarouselDemo />
             <ButtonPage />
-            <ResponsiveNewsGridWithVideos />
+            <ResponsiveNewsGridWithVideos /> 
             <CardSection/>
             <div className="sm:mt-20">
               <h1 className="text-black font-bold text-5xl sm:text-7xl">Hot News</h1>

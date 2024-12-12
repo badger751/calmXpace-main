@@ -3,50 +3,55 @@ import LargeNewsVideoCard from "@/components/ui/LargeNewsVideoCard";
 import NewsVideoCard from "@/components/ui/NewsVideoCard";
 
 const ResponsiveNewsGridWithVideos = () => {
-  const mainNews = {
-    category: "Technology",
-    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4",
+  const mainNews = 
+  {
+    category: "POLITICS",
+    videoUrl: "https://youtu.be/bM8UDOZAzUo",
     headline:
-      "AI-Generated Content Vs AI-Content Detectors: How Do They Work? Are They Even Effective?",
+      "Nishad की हत्या को बताया Yogi का हाथ Swami Prasad Maurya को बताया भगोड़ा| Sapa | BJP | Congress",
   };
+  
 
   const sideNews = [
     {
-      category: "India at 2047",
-      videoUrl: "https://www.w3schools.com/html/movie.mp4",
+      category: "INDIA",
+      videoUrl: "https://youtu.be/lkpyASiJU2Y?si=Qan4IWUvGJQGLZSG",
       headline:
-        "The Story Is Now Over For Bashar al-Assad, The Fallen Dictator. What Does A New Era Look Like?",
+        "Lucknow Hindus Protest : Bangladesh में अल्पसंख्यको पर हो रहे अत्याचार के खिलाफ जन आक्रोश रैली",
     },
     {
-      category: "India at 2047",
-      videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4",
+      category: "POLITICS",
+      videoUrl: "https://youtu.be/4YYe1ESrioY?si=g57oqOH4MAJbK8tC",
       headline:
-        "Opinion: Matangi — The New Indian Guerilla In The High Seas",
+        "Rahul Gandhi संभल के पीड़ित परिजनों की मुलाकात पर Congress प्रवक्ता ने क्या कहा ?| UPCM Yogi | BJP",
     },
   ];
 
   return (
-    <div className=" text-black p-4">
+    <div className="text-black p-4">
       {/* Main Grid Layout */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
         {/* Main News Video Card */}
         <div className="lg:col-span-2">
-          <LargeNewsVideoCard
-            category={mainNews.category}
-            videoUrl={mainNews.videoUrl}
-            headline={mainNews.headline}
-          />
+          <a href={mainNews.videoUrl} target="_blank" rel="noopener noreferrer">
+            <LargeNewsVideoCard
+              category={mainNews.category}
+              videoUrl={mainNews.videoUrl}
+              headline={mainNews.headline}
+            />
+          </a>
         </div>
 
         {/* Side News Video Cards */}
         <div className="space-y-4">
           {sideNews.map((news, index) => (
-            <NewsVideoCard
-              key={index}
-              category={news.category}
-              videoUrl={news.videoUrl}
-              headline={news.headline}
-            />
+            <a href={news.videoUrl} key={index} target="_blank" rel="noopener noreferrer">
+              <NewsVideoCard
+                category={news.category}
+                videoUrl={news.videoUrl}
+                headline={news.headline}
+              />
+            </a>
           ))}
         </div>
       </div>

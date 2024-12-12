@@ -25,7 +25,7 @@ export const fetchDatancr = async () => {
   return data;
 };
 
- export const fetchDatabihar = async () => {
+export const fetchDatabihar = async () => {
   const { data, error } = await supabase.from('bihar').select('*');
 
   if (error) {
@@ -36,7 +36,7 @@ export const fetchDatancr = async () => {
   return data;
 };
 
- export const fetchDatamp = async () => {
+export const fetchDatamp = async () => {
   const { data, error } = await supabase.from('mp').select('*');
 
   if (error) {
@@ -46,8 +46,6 @@ export const fetchDatancr = async () => {
 
   return data;
 };
-
-
 
 // Fetch post by ID
 export const fetchPostById = async (postId: string) => {
@@ -64,7 +62,6 @@ export const fetchPostById = async (postId: string) => {
 
   return data;
 };
-
 
 export const fetchPostByIdb = async (postId: string) => {
   const { data, error } = await supabase
@@ -93,9 +90,5 @@ export const fetchLiveStream = async (streamId: string) => {
     console.error('Error fetching live stream:', error);
     throw new Error('Failed to fetch live stream');
   }
-  return data ;
-
-
+  return data;
 };
-
-
