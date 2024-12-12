@@ -1,5 +1,4 @@
-"use client";
-
+"use client"
 import React from "react";
 import { AppleCardsCarouselDemo } from "@/components/sections/apple";
 import { InfiniteMovingCardsDemo } from "@/components/sections/infi-d";
@@ -15,7 +14,7 @@ import MyPage from "@/components/sections/sidebutton";
 import CardSection from "@/components/sections/md-layout";
 import Menu2 from "@/components/ui/menu2";
 
-export default async function Home() {
+export default  function Home() {
 
   return (
     <div className="flex flex-col min-h-screen bg-black">

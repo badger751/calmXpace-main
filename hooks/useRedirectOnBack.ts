@@ -1,13 +1,12 @@
-
-// File: hooks/useRefreshOnBack.ts
+// File: hooks/useRedirectOnBack.ts
 import { useEffect } from 'react';
 
-export function useRefreshOnBack() {
+export function useRedirectOnBack() {
   useEffect(() => {
     const handlePopState = () => {
-      // Refresh the page when the back button is pressed
+      // Redirect to the specified URL when the back button is pressed
       if (typeof window !== 'undefined') {
-        window.location.reload();
+        window.location.href = "https://srsamachar.in";
       }
     };
 

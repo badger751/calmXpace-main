@@ -3,8 +3,7 @@
 import BlogLayout from "@/components/ui/blog_layout";
 import { fetchPostById } from "@/lib/fetchdata";
 import { useEffect, useState } from "react";
-import { useRouter } from "next/router";
-import { useRefreshOnBack } from "@/hooks/useRefreshOnBack"; // Import the custom hook
+import { useRedirectOnBack } from "@/hooks/useRedirectOnBack"; // Updated hook
 
 interface Post {
   id: string;
@@ -30,29 +29,38 @@ export default function BlogPage({ params }: BlogPageProps) {
   const [routerReady, setRouterReady] = useState(false);
 
   useEffect(() => {
-    // Delay setting the router ready state until after the component mounts
     setRouterReady(true);
   }, []);
 
-  // Fetch post only if the router is ready
   useEffect(() => {
-    const fetchPost = async () => {
-      try {
-        const post = await fetchPostById(postId);
-        setPost(post);
-      } catch (error) {
-        console.error("Error fetching post:", error);
-        setError("Failed to load the post.");
-      }
+    let isCancelled = false;
+
+    const fetchPost = () => {
+      fetchPostById(postId)
+        .then((post) => {
+          if (!isCancelled) {
+            setPost(post);
+          }
+        })
+        .catch((error) => {
+          if (!isCancelled) {
+            console.error("Error fetching post:", error);
+            setError("Failed to load the post.");
+          }
+        });
     };
 
     if (routerReady && postId) {
       fetchPost();
     }
+
+    return () => {
+      isCancelled = true;
+    };
   }, [postId, routerReady]);
 
   // Call the custom hook to handle back navigation
-  useRefreshOnBack();
+  useRedirectOnBack();
 
   return (
     <div>
